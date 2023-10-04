@@ -2,7 +2,7 @@
 
 {% block body %}
 <div class="continer" style="text-align: center; margin: auto;">
-    <div style="position:absolute; top:40% ;left:40%">
+    <div style="position:absolute; top:10%   ;left:20%">
         <form method="POST" enctype="multipart/form-data" action="{% url 'show-dataset' %}"> 
             {% csrf_token %}
             <h4>Numerical</h4>
@@ -15,7 +15,7 @@
             <input type="checkbox" name="quantitative" value="{{i}}" id="{{i}}">
             <label for="{{i}}">{{i}}</label><br>
             {% endfor %}
-            <input type="submit" type="button" class="btn btn-primary">
+            <input type="submit" type="button" class="button button1">
         </form>
     </div>
 </div>

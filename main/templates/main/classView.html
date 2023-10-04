@@ -1,20 +1,20 @@
 {% extends 'main.html' %}
 
 {% block body %}
-<div class="container" style="margin: 1% 3%;">
-    <h2>Class Stats</h2>
+<div class="container" style="text-align: center; margin: auto;">
+    <h2 style="color:white;background-color:#004f83">Class Statistics</h2>
 </div>
 <div class="container" style="display: block;">
     {% for class,data in class.items %}
     <div class="row">
         <div class="card" style="margin: 2px;">
             <div class="card-body">
-                <h3>{{ class }}</h3>
+                <h3 style="color:white;background-color:#004f83">{{ class }}</h3>
                 <hr>
                 <div style="margin: 10px; display: flex;">
                     {% for feature,stats in data.stats.items %}
                     <div style="padding: 10px;">
-                        <h4>{{ feature }}</h4>
+                        <h4 style="color:white;background-color:#004f83">{{ feature }}</h4>
                         <table class="table table-striped">
                             {% for key,value in stats.items %}
                             <tr>
@@ -28,7 +28,7 @@
                     <div>
                     {% for feature,stats in data.covariance.items %}
                     <div style="padding: 10px;">
-                        <h4>covariance</h4>
+                        <h4 style="color:white;background-color:#004f83">Covariance Matrix</h4>
                         <table class="table table-striped">
                             {% for key,value in stats.items %}
                             <tr>
@@ -42,7 +42,7 @@
                     {% endfor %}
                     {% for feature,stats in data.correlation.items %}
                     <div style="padding: 10px;">
-                        <h4>corelation</h4>
+                        <h4 style="color:white;background-color:#004f83">Corelation Matrix</h4>
                         <table class="table table-striped">
                             {% for key,value in stats.items %}
                             <tr>

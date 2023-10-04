@@ -1,12 +1,15 @@
 {% extends 'main.html' %}
 
 {% block body %}
-<div class="container" style="margin: 20px; display: block;">
+<div class="container" style="text-align: center; margin: auto;">
+    <h2 style="color:white;background-color:#004f83">Prediction</h2>
+</div>
+<div class="container" style="text-align: center; margin: auto;display: block;">
     <form style="display: flex;" method="POST" action="">
 
         {% csrf_token %}
         <input type="text" name="point" class="form-control" required="True" placeholder="Enter feature vector in form => {{placeholder}}">
-        <input type="submit" class="btn btn-primary" value="Predict">
+        <input type="submit" class="button button1" value="Predict">
     </form>
 </div>
 <div class="container">

@@ -1,17 +1,24 @@
 {% extends 'main.html' %}
 
 {% block body %}
-
-<div class="container" style="display: block;">
+<div class="container" style="text-align: center; margin: auto;">
+    <h2 style="color:white;background-color:#004f83">Data Set View</h2>
+</div>
+<div class="container" style="display: block; text-align: center; margin: auto;">
     <div class="row">
+        
         <div class="card" style="margin: 2px;">
             <div class="card-body">
+                
                 <div style="display: flex;">
+                    
                     <table class="table table-striped" style="margin: 5px;">
-                        <tr>
-                            <th>{{ class_name }}</th>
+                        
+                        <tr >
+                            
+                            <th >{{ class_name }}</th>
                             {% for hdg in features.names %}
-                            <th>{{ hdg   }}</th>
+                            <th >{{ hdg   }}</th>
                             {% endfor %}
                         </tr>
                         {% for row in df_10 %}
@@ -23,8 +30,8 @@
                         {% endfor %}   
                     </table>
                     <table class="table table-striped" style="margin: 5px;">
-                        <tr><td><strong> Number of Quantitative </strong></td><td>{{ features.Quantitative|length }}</td></tr>
-                        <tr><td><strong> Number of Numerical </strong></td><td>{{ features.Numerical|length }}</td></tr>
+                        <tr><td><strong style="color:white;background-color:#004f83"> Number of Quantitative </strong></td><td>{{ features.Quantitative|length }}</td></tr>
+                        <tr><td><strong style="color:white;background-color:#004f83"> Number of Numerical </strong></td><td>{{ features.Numerical|length }}</td></tr>
                     </table>
                 </div>
             </div>
@@ -34,13 +41,13 @@
     <div class="row">
         <div class="card" style="margin: 2px;">
             <div class="card-body">
-                <h3>Operations</h3>
+                <h3 style="color:white;background-color:#004f83">Operations</h3>
                 <br>
                 <br>
-                <a class="btn btn-primary" href="{%url 'feature-view' %}">Feature view</a>
-                <a class="btn btn-primary" href="{%url 'class-view' %}">Class view</a>
-                <a class="btn btn-primary" href="{%url 'box-plot' %}">Box Plot</a>
-                <a class="btn btn-primary" href="{%url 'predict' %}">Predict</a>
+                <a class="button button1" href="{%url 'feature-view' %}">Feature view</a>
+                <a class="button button1" href="{%url 'class-view' %}">Class view</a>
+                <a class="button button1" href="{%url 'box-plot' %}">Box Plot</a>
+                <a class="button button1" href="{%url 'predict' %}">Predict</a>
             </div>
         </div>
     </div>
