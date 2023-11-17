@@ -321,3 +321,15 @@ def float_to_exponential(num):
         string: exponential representation of given number.
     """
     return f"{num:e}"
+
+    def KPCA(X,y):
+        """_summary_
+        This function is used to define Kernel Principal Component Analysis.
+        Args: 
+             x and y 
+             Returns: Kernel Principal Component Analysis 
+             """
+        X, y = make_swiss_roll(n_samples=1000, random_state=42)
+        kpca = KernelPCA(n_components=2, kernel='rbf', gamma=0.1)
+        X_kpca = kpca.fit_transform(X)
+    return X_kpca 
